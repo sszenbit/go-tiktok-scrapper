@@ -1,4 +1,4 @@
-module scrapper
+module github.com/sszenbit/go-tiktok-scrapper
 
 go 1.18
 
@@ -22,5 +22,6 @@ require (
 	google.golang.org/appengine v1.6.7 // indirect
 	google.golang.org/genproto v0.0.0-20220527130721-00d5c0f3be58 // indirect
 	google.golang.org/grpc v1.46.2 // indirect
+	google.golang.org/grpc/cmd/protoc-gen-go-grpc v1.2.0 // indirect
 	google.golang.org/protobuf v1.28.0 // indirect
 )

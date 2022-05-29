@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package scrapper;
+
+option go_package = "github.com/sszenbit/go-tiktok-scrapper;scrapperpc";
+
+message TrackInfo {
+    string trackTiktokId = 1;
+    string trackTitle = 2;
+    string trackPlayUrl = 3;
+    string trackCoverUrl = 4;
+    string trackAuthorName = 5;
+    int64 initialVideoCount = 6;
+ }
+
+message TrackInfoRequest {
+    string url = 1;
+}
+   
+message TrackInfoResponse {
+    TrackInfo info = 1;
+}
+ 
+
+service TikTokScrapperService {
+    rpc GetTrackInfo (TrackInfoRequest) returns (TrackInfoResponse);
+}
